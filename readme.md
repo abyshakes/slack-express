@@ -1,4 +1,4 @@
-# slack-express [![bitHound Overalll Score](https://www.bithound.io/github/smallwins/slack-express/badges/score.svg)](https://www.bithound.io/github/smallwins/slack-express) [![bitHound Dependencies](https://www.bithound.io/github/smallwins/slack-express/badges/dependencies.svg)](https://www.bithound.io/github/smallwins/slack-express/master/dependencies/npm) [ ![Codeship Status for smallwins/slack-express](https://codeship.com/projects/8348a860-7a10-0133-8cf8-72bb2b768401/status?branch=master)](https://codeship.com/projects/118901)
+# slack-express sqlite3 version
 
 Quickly implement a Slack slash commands as Express middleware.
 
