@@ -25,27 +25,27 @@ export function exists(table, callback) {
 }
 
 export function create(table, callback) {
-  let schema = { 
-    TableName: table, 
+  let schema = {
+    TableName: table,
     AttributeDefinitions: [
       {AttributeName: 'team_id', AttributeType: 'S'},
-      {AttributeName: 'user_id', AttributeType: 'S'} 
-    ], 
+      {AttributeName: 'user_id', AttributeType: 'S'}
+    ],
     KeySchema: [
       {AttributeName: 'team_id', KeyType: 'HASH'},
-      {AttributeName: 'user_id', KeyType: 'RANGE'} 
-    ], 
+      {AttributeName: 'user_id', KeyType: 'RANGE'}
+    ],
     GlobalSecondaryIndexes: [{
-      IndexName: 'user_id_index', 
+      IndexName: 'user_id_index',
       KeySchema: [{AttributeName: 'user_id', KeyType: 'HASH'}],
       Projection: {ProjectionType: 'ALL'},
       ProvisionedThroughput: {
-        ReadCapacityUnits:1, 
+        ReadCapacityUnits:1,
         WriteCapacityUnits: 1
       }
     }],
     ProvisionedThroughput: {
-      ReadCapacityUnits:1, 
+      ReadCapacityUnits:1,
       WriteCapacityUnits: 1
     }
   }
@@ -70,7 +70,7 @@ export default function init(appname='slack-slash-app', callback) {
     else {
       create(appname, callback)
     }
-  }) 
+  })
 }
 
 if (require.main === module) {
