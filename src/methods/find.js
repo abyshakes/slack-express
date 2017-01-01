@@ -1,4 +1,4 @@
 // TODO add redis adapter logic
-import find from '../adapters/dynamo/find'
+import find from '../adapters/sqlite/find'
 
 export default find
