@@ -4,7 +4,7 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _find = require('../adapters/dynamo/find');
+var _find = require('../adapters/sqlite/find');
 
 var _find2 = _interopRequireDefault(_find);
 

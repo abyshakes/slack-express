@@ -8,9 +8,9 @@ export default function find(params, callback) {
       if (err) {
         callback(err);
       }
-      let account.user_id = rows[0].user_id;
-      let account.team_id = rows[0].team_id;
-      let account.access_token = rows[0].access_token;
-      callback(null, account);
+      else {
+        let account = rows[0];
+        callback(null, account);
+      }
   });
 }
